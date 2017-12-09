@@ -1,0 +1,15 @@
+rootProject.name = 'FlashCard'
+
+include ':app'
+
+include ':react-native-navigation'
+project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/android/app/')
+
+include ':react-native-android-speech'
+project(':react-native-android-speech').projectDir = new File(settingsDir, '../node_modules/react-native-android-speech')
+
+include ':react-native-cafe-bazaar', ':app'
+project(':react-native-cafe-bazaar').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-cafe-bazaar/android/app/')
+
+include ':RNSendIntentModule', ':app'
+project(':RNSendIntentModule').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-send-intent/android')
